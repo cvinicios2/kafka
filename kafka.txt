@@ -1,0 +1,19 @@
+./kafka-topics.sh --describe --zookeeper localhost:2181
+lista topicos e partições
+
+ bin/kafka-topics.sh --zookeeper localhost:2181 --list --topic topico1
+lista topicos
+
+
+bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic test --from-beginning
+lista conteudo topico
+
+./kafka-server-start.sh ../config/server.properties
+starta o broker
+
+
+./kafka-console-producer.sh --broker-list 192.168.33.153:9092 --topic topico1
+enviar mensagem para o topico
+
+./kafka-topics.sh --zookeeper localhost:2181 --alter --topic demo-topic --partitions 4
+altera as partições
